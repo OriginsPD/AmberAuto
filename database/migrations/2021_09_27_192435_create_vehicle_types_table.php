@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVechicleTypesTable extends Migration
+class CreateVehicleTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -16,7 +16,6 @@ class CreateVechicleTypesTable extends Migration
         Schema::create('vehicle_types', function (Blueprint $table) {
             $table->id();
             $table->string('vehicle_types_nm');
-            $table->foreignId('brand_id')->constrained('brands','id');
         });
     }
 
@@ -27,6 +26,6 @@ class CreateVechicleTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vechicle_types');
+        Schema::dropIfExists('vehicle_types');
     }
 }

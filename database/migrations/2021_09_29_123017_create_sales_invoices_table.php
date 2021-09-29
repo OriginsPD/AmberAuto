@@ -15,7 +15,10 @@ class CreateSalesInvoicesTable extends Migration
     {
         Schema::create('sales_invoices', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('customer_id')->constrained('customers','id');
+            $table->date('invoice_dt');
+            $table->bigInteger('invoice_nbr');
+            $table->string('invoice_type');
         });
     }
 

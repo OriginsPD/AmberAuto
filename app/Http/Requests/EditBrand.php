@@ -13,7 +13,7 @@ class EditBrand extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,18 @@ class EditBrand extends FormRequest
     public function rules()
     {
         return [
-            //
+            'brand_nm' => 'required|unique:brands',
+            'brand_desc' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'brand_nm.required' => 'Please Enter Brand Name',
+            'brand_nm.unique' => 'Brand Has Already been Added',
+            'brand_desc.required' => 'Please Add Some Description To the Brand',
+            'brand_desc.max' => 'Description Must Not Be Over 25 Characters Long'
         ];
     }
 }

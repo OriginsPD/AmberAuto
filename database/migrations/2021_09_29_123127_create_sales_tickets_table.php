@@ -15,7 +15,11 @@ class CreateSalesTicketsTable extends Migration
     {
         Schema::create('sales_tickets', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->bigInteger('ticket_nbr');
+            $table->date('created_dt');
+            $table->foreignId('customer_id')->constrained('customer','id');
+            $table->foreignId('sales_rep_id')->constrained('users','id');
+            $table->boolean('ticket_status');
         });
     }
 

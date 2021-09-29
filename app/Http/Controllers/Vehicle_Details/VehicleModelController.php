@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Vehicle_Details;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateModel;
 use App\Http\Requests\EditModel;
 use App\Models\brands;

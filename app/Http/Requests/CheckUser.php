@@ -13,7 +13,7 @@ class CheckUser extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,16 @@ class CheckUser extends FormRequest
     public function rules()
     {
         return [
-            //
+            'email' => 'required|email',
+            'password' => 'required|min:6'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'email.required' => 'Email is Required',
+            'Password.required' => 'Please Enter Password',
         ];
     }
 }

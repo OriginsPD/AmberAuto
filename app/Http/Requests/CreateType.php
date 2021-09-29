@@ -13,7 +13,7 @@ class CreateType extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,15 @@ class CreateType extends FormRequest
     public function rules()
     {
         return [
-            //
+            'vehicle_types_nm' => 'required|unique:vehicle_types',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'vehicle_types_nm.required' => 'Please Enter Vehicle Type',
+            'vehicle_types_nm.unique' => 'Vehicle Type Have Already Been Added',
         ];
     }
 }

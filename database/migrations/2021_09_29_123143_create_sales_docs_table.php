@@ -15,7 +15,12 @@ class CreateSalesDocsTable extends Migration
     {
         Schema::create('sales_docs', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('ticket_id')->constrained('sales_tickets','id');
+            $table->string('doc_name');
+            $table->date('submitted_dt');
+            $table->boolean('doc_checked')->default(0);
+            $table->string('checked_by');
+
         });
     }
 
