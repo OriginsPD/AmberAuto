@@ -1,0 +1,1 @@
+<h2 {{  $attributes->merge(['class' => 'text-lg font-bold tracking-tighter text-black uppercase transition duration-500 ease-in-out transform hover:text-lightBlack-500 dark:text-lightBlue-400']) }} > AMBER AUTO </h2>

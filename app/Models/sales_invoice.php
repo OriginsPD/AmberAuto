@@ -22,4 +22,9 @@ class sales_invoice extends Model
     {
         return $this->belongsTo(customer::class,'customer_id','id');
     }
+
+    public function sales_invoice_details()
+    {
+        return $this->hasMany(sales_invoice_detail::class);
+    }
 }

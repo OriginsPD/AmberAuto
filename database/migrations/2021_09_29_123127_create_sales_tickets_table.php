@@ -17,7 +17,7 @@ class CreateSalesTicketsTable extends Migration
             $table->id();
             $table->bigInteger('ticket_nbr');
             $table->date('created_dt');
-            $table->foreignId('customer_id')->constrained('customer','id');
+            $table->foreignId('customer_id')->constrained('customers','id');
             $table->foreignId('sales_rep_id')->constrained('users','id');
             $table->boolean('ticket_status');
         });

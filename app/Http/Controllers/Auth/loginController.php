@@ -18,8 +18,12 @@ class loginController extends Controller
     public function store(CheckUser $request)
     {
         if (Auth::attempt($request->validated())) {
-            if (Auth::user()->is_admin) {
-                return view('Admin.index');
+            if (Auth::user()->is_admin === 1) {
+                return redirect()->route('Admin.index');
+            }
+
+            if (Auth::user()->is_admin === 2) {
+                return redirect()->route('Agent.index');
             }
             return view('index');
         }

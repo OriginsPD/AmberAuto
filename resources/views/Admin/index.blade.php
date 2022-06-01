@@ -18,12 +18,7 @@
                 <!-- <hr > -->
             </div>
         </div>
-        <!---== First Stats Container ====--->
 
-        <!---== Second Stats Container ====--->
-        <!---== Second Stats Container ====--->
-
-        <!---== Third Stats Container ====--->
         <div class="container mx-auto pr-4">
             <div class="w-72 bg-white max-w-xs mx-auto rounded-sm overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:scale-100 cursor-pointer">
                 <div class="h-20 bg-purple-400 flex items-center justify-between">

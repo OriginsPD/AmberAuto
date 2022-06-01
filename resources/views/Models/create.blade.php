@@ -3,16 +3,13 @@
 @section('page_title','Create Vehicle Model')
 
 @section('content')
-    <div class="p-4 flex">
-        <h1 class="text-3xl font-bold mb-10">
-            Add Vehicle Type
-        </h1>
-    </div>
+
+    <x-header>Add Vehicle Model</x-header>
     @if(session()->has('success'))
         <x-alert message="{{ session('success') }}"/>
     @endif
 <!-- component -->
-<div class="bg-white w-5/6 mx-24 shadow rounded-lg p-6">
+<div class="bg-white w-5/6 mx-24 mt-10 shadow rounded-lg p-6">
     <form action="{{ route('Models.store') }}" method="POST">
         @csrf
     <div class="grid lg:grid-cols-2 gap-6">

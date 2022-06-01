@@ -3,11 +3,8 @@
 @section('page_title','Create Vehicle Type')
 
 @section('content')
-    <div class="p-4 flex">
-        <h1 class="text-3xl font-bold mb-10">
-            Add Vehicle Type
-        </h1>
-    </div>
+
+    <x-header>Add Vehicle Type</x-header>
     @if(session()->has('success'))
         <x-alert message="{{ session('success') }}"/>
     @endif

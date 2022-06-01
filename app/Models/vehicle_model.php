@@ -26,12 +26,17 @@ class vehicle_model extends Model
 
     public function Type()
     {
-        return $this->belongsTo(vehicle_types::class,'vehicle_types_id');
+        return $this->belongsTo(vehicle_types::class, 'vehicle_types_id');
     }
 
     public function Brand()
     {
-        return $this->belongsTo(brands::class,'brand_id');
+        return $this->belongsTo(brands::class, 'brand_id');
+    }
+
+    public function sales_invoice_details()
+    {
+        return $this->hasMany(sales_invoice_detail::class);
     }
 
 }

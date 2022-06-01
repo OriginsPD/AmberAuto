@@ -1,5 +1,12 @@
 <?php
 
+use App\Http\Controllers\AgentController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\Sales\SalesController;
+use App\Http\Controllers\Sales\SalesDocController;
+use App\Http\Controllers\Sales\SalesInvoiceController;
+use App\Http\Controllers\Sales\SalesInvoiceDetailController;
+use App\Http\Controllers\Sales\SalesTicketController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ClientController;
@@ -34,5 +41,16 @@ Route::resource('Brands', BrandsController::class);
 Route::resource('Type', VehicleTypesController::class);
 Route::resource('Models', VehicleModelController::class);
 Route::resource('Client', ClientController::class);
+
+Route::resource('Agent', AgentController::class);
+Route::resource('Customer', CustomerController::class);
+Route::resource('Sales', SalesController::class);
+
+Route::group(['as' => 'Sales'], function () {
+    Route::resource('Invoice', SalesInvoiceController::class);
+    Route::resource('InvoiceDetail', SalesInvoiceDetailController::class);
+    Route::resource('Documents', SalesDocController::class);
+    Route::resource('Ticket', SalesTicketController::class);
+});
 
 Route::post('logout', [LogoutController::class, 'logout'])->name('logout');

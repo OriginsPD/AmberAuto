@@ -2,12 +2,15 @@
 
 namespace App\Actions;
 
+use App\Http\Requests\CreateUser;
 use App\Models\User;
+use Illuminate\Http\Request;
 
-class CreateUser
+class CreateUserAction
 {
-    public function execute(Request $request): void
+    public function execute(CreateUser $request): void
     {
         User::create($request->validated());
+
     }
 }

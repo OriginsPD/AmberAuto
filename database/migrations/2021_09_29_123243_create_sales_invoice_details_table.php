@@ -15,7 +15,12 @@ class CreateSalesInvoiceDetailsTable extends Migration
     {
         Schema::create('sales_invoice_details', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('sales_invoice_id')->constrained('sales_invoices','id');
+            $table->foreignId('vehicle_model_id')->constrained('vehicle_models','id');
+            $table->integer('quantity_amt');
+            $table->integer('cost_val');
+            $table->integer('discount_amt');
+            $table->integer('sales_price');
         });
     }
 

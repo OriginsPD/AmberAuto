@@ -35,8 +35,8 @@ class CreateUser extends FormRequest
         return [
             'name.required' => 'Full name is Required',
             'email.required' => 'Email is Required',
-            'Password.required' => 'Please Create a Unique Password',
-            'Password.confirmed' => 'Password Does Not Match',
+            'password.required' => 'Please Create a Unique Password',
+            'password.confirmed' => 'Password Does Not Match',
         ];
     }
 }

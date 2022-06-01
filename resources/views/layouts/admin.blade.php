@@ -8,10 +8,11 @@
     <title>Admin | @yield('page_title')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link href="https://unpkg.com/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="flex-col w-full md:flex md:flex-row md:min-h-screen bg-blueGray-50">
-    <div class="flex flex-col h-screen sticky top-0 flex-shrink-0 w-full bg-gradient-to-b from-cool-gray-600 to-black shadow-xl text-blueGray-700 md:w-64">
+    <div class="flex flex-col h-screen sticky top-0 flex-shrink-0 w-full bg-gradient-to-b from-cool-gray-700 to-black shadow-xl text-blueGray-700 md:w-64">
         <div class="flex flex-row items-center justify-between flex-shrink-0 py-4">
             <a href="{{ route('Admin.index')}}" class="pr-2 lg:pr-8 lg:px-6 focus:outline-none">
                 <div class="inline-flex items-center">

@@ -3,12 +3,8 @@
 @section('page_title','Brands')
 
 @section('content')
-    <div class="text-gray-900 h-full bg-gray-200">
-        <div class="p-4 flex">
-            <h1 class="text-3xl">
-                Brands
-            </h1>
-        </div>
+
+        <x-header>Brands</x-header>
         @if(session()->has('success'))
             <x-alert message="{{ session('success') }}"/>
         @endif
@@ -49,5 +45,4 @@
                 </tbody>
             </table>
         </div>
-    </div>
 @endsection

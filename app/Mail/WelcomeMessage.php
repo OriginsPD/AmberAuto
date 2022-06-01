@@ -18,7 +18,10 @@ class WelcomeMessage extends Mailable
      */
     public function __construct()
     {
-        //
+        $detail = [
+            'Name' => 'New Customer',
+            'body' => 'Test Message',
+        ];
     }
 
     /**
@@ -28,6 +31,6 @@ class WelcomeMessage extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->subject('TESTING EVENT')->view('mail.index');
     }
 }

@@ -3,6 +3,7 @@
 @section('page_title','New Brand')
 
 @section('content')
+    <x-header>Add Brand</x-header>
     @if(session()->has('success'))
         <x-alert message="{{ session('success') }}"/>
     @endif

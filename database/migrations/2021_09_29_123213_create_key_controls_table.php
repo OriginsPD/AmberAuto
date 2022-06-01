@@ -15,7 +15,8 @@ class CreateKeyControlsTable extends Migration
     {
         Schema::create('key_controls', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('key_nm');
+            $table->bigInteger('key_val');
         });
     }
 

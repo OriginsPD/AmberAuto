@@ -41,6 +41,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    /**
+     * @var mixed
+     */
+
+    private $is_admin;
 
     public function setPasswordAttribute($value)
     {
